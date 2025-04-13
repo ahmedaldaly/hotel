@@ -1,0 +1,25 @@
+
+  /* الصورة قبل */
+  .side::before,
+  .side::after {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBmaWxsLXJ1bGU9J2V2ZW5vZGQnIGNsaXAtcnVsZT0nZXZlbm9kZCcgZD0nTTAgMjBIMjBDOC45NTQzMSAyMCAwIDExLjA0NTcgMCAwVjIwWicgZmlsbD0nd2hpdGUnLz48cGF0aCBmaWxsLXJ1bGU9J2V2ZW5vZGQnIGNsaXAtcnVsZT0nZXZlbm9kZCcgZD0nTTAgMjBIMjBDOC45NTQzMSAyMCAwIDExLjA0NTcgMCAwVjIwWicgZmlsbD0nd2hpdGUnLz48cGF0aCBmaWxsLXJ1bGU9J2V2ZW5vZGQnIGNsaXAtcnVsZT0nZXZlbm9kZCcgZD0nTTAgMjBIMjBDOC45NTQzMSAyMCAwIDExLjA0NTcgMCAwVjIwWicgZmlsbD0nd2hpdGUnLz48cGF0aCBmaWxsLXJ1bGU9J2V2ZW5vZGQnIGNsaXAtcnVsZT0nZXZlbm9kZCcgZD0nTTAgMjBIMjBDOC45NTQzMSAyMCAwIDExLjA0NTcgMCAwVjIwWicgZmlsbD0nd2hpdGUnLz48L3N2Zz4=");
+    position: absolute;
+    transform: translateX(-50%);
+
+
+  }
+ 
+  /* تحديد مكان before فوق */
+  .side::before {
+    top: -6; /* عدلها حسب حجم الصورة */
+    left: -16;
+    transform: rotate(184deg);
+  }
+  
+  /* تحديد مكان after تحت */
+  .side::after {
+    right: -16;
+    top: -6; /* عدلها حسب حجم الصورة */
+    transform: rotate(90deg);
+  }
+  
