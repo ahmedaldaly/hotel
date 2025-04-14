@@ -12,6 +12,7 @@ const Fetch = () => {
     amenities: string[];
     bedType: string;
     description: string;
+    price :string
     _id: string;
     images: {
       url: string;
@@ -56,6 +57,7 @@ const Fetch = () => {
           bedType: editData.bedType,
           description: editData.description,
           amenities: editData.amenities,
+          price:editData.price
         },
         {
           headers: {
@@ -128,6 +130,15 @@ const Fetch = () => {
               value={editData.bedType}
               onChange={(e) =>
                 setEditData({ ...editData, bedType: e.target.value })
+              }
+            />
+               <input
+              className="w-full mb-3 p-2 border rounded"
+              placeholder=" السعر"
+              value={editData.price}
+              type ='number'
+              onChange={(e) =>
+                setEditData({ ...editData, price: e.target.value })
               }
             />
             <textarea

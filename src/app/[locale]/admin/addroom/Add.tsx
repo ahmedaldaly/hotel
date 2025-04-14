@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React ,{useState} from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
@@ -27,9 +27,10 @@ const AddRoomPage = () => {
     handleSubmit,
     formState: { errors }
   } = useForm<RoomFormData>();
-
+const [loading, setLoading] = useState(false)
   const onSubmit = async (data: RoomFormData) => {
     try {
+      setLoading(true)
       const formData = new FormData();
 
       // Append fields
@@ -58,6 +59,7 @@ const AddRoomPage = () => {
         }
       );
     await  toast.success('تمت إضافة الغرفة بنجاح');
+    setLoading(false)
       router.push('/admin/roommangment');
     } catch (error) {
       console.error('Error adding room:', error);
@@ -222,7 +224,7 @@ const AddRoomPage = () => {
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition duration-200"
         >
-          إضافة الغرفة
+        {loading?"جاري التحميل":"اضافة الغرفة"}
         </button>
       </form>
       <ToastContainer />
