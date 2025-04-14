@@ -1,0 +1,19 @@
+# استثناء مجلد node_modules
+node_modules/
+
+# استثناء ملف البيئة
+.env
+
+# استثناء ملفات الـ log
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# استثناء المجلدات الناتجة عن التشغيل
+dist/
+build/
+.DS_Store
+
+.vercel
