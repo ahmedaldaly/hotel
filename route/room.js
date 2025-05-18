@@ -2,9 +2,9 @@ const router = require("express").Router();
 const { addRoom ,deleteRoom,AllRoom,GetRoom,edit} = require("../controller/roomController");
 const multer = require("multer");
 const {Authorization, verifyTokenAndAdmin} = require('../middelware/Authorization')
+const storage = multer.memoryStorage();
+const upload = multer({storage});
 
-
-const upload = multer({ dest:'uploads' });
 
 // تحديث الراوتر ليدعم رفع الصور
 router.post("/add-room",verifyTokenAndAdmin,upload.array("files", 5), addRoom);
