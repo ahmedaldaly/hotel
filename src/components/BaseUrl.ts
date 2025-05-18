@@ -1,1 +1,1 @@
-export  const BaseUrl:string ='http://localhost:4000'
+export  const BaseUrl:string ='https://hotelserver-hazel.vercel.app'

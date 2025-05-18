@@ -35,7 +35,7 @@ const page = () => {
 
     <form 
     onSubmit={onSubmit}
-    className={`mt-20 max-w-md mx-auto px-6 py-8 backdrop-blur-md bg-white/30 rounded-2xl shadow-md space-y-5 border border-white/40 ${isArabic ? 'text-right' : 'text-left'}`}
+    className={`mt-20 max-w-md mx-auto min-h-screen px-6 py-8 backdrop-blur-md bg-white/30 rounded-2xl shadow-md space-y-5 border border-white/40 ${isArabic ? 'text-right' : 'text-left'}`}
   >
     <div>
       <label className="block mb-1 text-gray-800 font-semibold">
